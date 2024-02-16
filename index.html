@@ -9,12 +9,16 @@
 
 </head>
 <body>
-    <header>
+  <header class="bg-gray-800 text-white">
+    <div class="container mx-auto flex justify-between items-center py-4">
+        <h1 class="text-2xl font-bold">Interactive Geometry Genius</h1>
+        <a href="#" class="text-base">Blog</a>
+    </div>
+</header>
 
-    </header>
     <main>
-        <div class="flex flex-col md:flex-row">
-          <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-10">
+        <div class=" flex ">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
             <!-- shape card container  -->
             <div class="card w-96 bg-base-100 shadow-xl">
               <figure><img src="/images/triangle.png" alt="Shoes" /></figure>
@@ -55,20 +59,99 @@
               </div>
             </div>
             <div class="card w-96 bg-base-100 shadow-xl">
-              <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+              <figure><img src="/images/parallelogram.png" alt="Shoes" /></figure>
               <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <h2 class="card-title">parallelogram</h2>
+                <p class="text-center">Area (A)=B*H</p>
+                <div>
+                  <input id="Text-Base"class="w-24 text-2xl p-2 rounded-sm"type="text" placeholder="B">
+                  <span>cm</span>
+                  <input id="Text-Height" class="w-24 text-2xl p-2 rounded-sm"type="text" placeholder="H">
+                  <span>cm</span>
+                </div>
+                <div>
+                  <p class="text 3xl "> Area :<span id="text3-area"></span><span>cm <sup>2</sup></span></p>
+                </div>
                 <div class="card-actions justify-end">
-                  <button class="btn btn-primary">Buy Now</button>
+                  <button onclick="CalculateTriangle()" class="btn btn-primary w-full">Calculate</button>
+                </div>
+              </div>
+            </div>
+            <div class="card w-96 bg-base-100 shadow-xl">
+              <figure><img src="/images/rhombus.png" alt="Shoes" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">Rhombus</h2>
+                <p class="text-center">Area (A)=0.5*d1*d2</p>
+                <div>
+                  <input id="Text-d1"class="w-24 text-2xl p-2 rounded-sm"type="text" placeholder="d1">
+                  <span>cm</span>
+                  <input id="Text-d2" class="w-24 text-2xl p-2 rounded-sm"type="text" placeholder="d2">
+                  <span>cm</span>
+                </div>
+                <div>
+                  <p class="text 3xl "> Area :<span id="text4-area"></span><span>cm <sup>2</sup></span></p>
+                </div>
+                <div class="card-actions justify-end">
+                  <button onclick="CalculateTriangle()" class="btn btn-primary w-full">Calculate</button>
+                </div>
+              </div>
+            </div>
+            <div class="card w-96 bg-base-100 shadow-xl">
+              <figure><img src="/images/pentagon.png" alt="Shoes" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">pentagon</h2>
+                <p class="text-center">Area (A)=0.5*p*b</p>
+                <div>
+                  <input id="Text-p"class="w-24 text-2xl p-2 rounded-sm"type="text" placeholder="p">
+                  <span>cm</span>
+                  <input id="Text-b" class="w-24 text-2xl p-2 rounded-sm"type="text" placeholder="b">
+                  <span>cm</span>
+                </div>
+                <div>
+                  <p class="text 3xl "> Area :<span id="text5-area"></span><span>cm <sup>2</sup></span></p>
+                </div>
+                <div class="card-actions justify-end">
+                  <button onclick="CalculateTriangle()" class="btn btn-primary w-full">Calculate</button>
+                </div>
+              </div>
+            </div>
+            <div class="card w-96 bg-base-100 shadow-xl">
+              <figure><img src="/images/parallelogram.png" alt="Shoes" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">parallelogram</h2>
+                <p class="text-center">Area (A)=B*H</p>
+                <div>
+                  <input id="Text-Base"class="w-24 text-2xl p-2 rounded-sm"type="text" placeholder="B">
+                  <span>cm</span>
+                  <input id="Text-Height" class="w-24 text-2xl p-2 rounded-sm"type="text" placeholder="H">
+                  <span>cm</span>
+                </div>
+                <div>
+                  <p class="text 3xl "> Area :<span id="text3-area"></span><span>cm <sup>2</sup></span></p>
+                </div>
+                <div class="card-actions justify-end">
+                  <button onclick="CalculateTriangle()" class="btn btn-primary w-full">Calculate</button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="w-96 border-2 border-gray-700 rounded-md m-10">
-            <!-- area  calculation container -->
-            <h2 class="text-3xl text-center">Area calculation</h2>
-          </div>
+          <div class="hidden md:block">
+            <div class="w-full border-2 border-gray-700 rounded-md mt-8">
+                <!-- area calculation container -->
+                <h2 class="text-3xl text-center py-4">Area calculation</h2>
+                <!-- Add any additional elements or scripts related to area calculation here -->
+            </div>
+        </div>
+    </div>
+    <!-- Area calculation container for small screens -->
+    <div class="md:hidden">
+        <div class="w-full border-2 border-gray-700 rounded-md mt-8">
+            <!-- area calculation container -->
+            <h2 class="text-3xl text-center py-4">Area calculation</h2>
+            <!-- Add any additional elements or scripts related to area calculation here -->
+        </div>
+    </div>
+
         </div>
 
     </main>
